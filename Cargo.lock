@@ -9,6 +9,7 @@ dependencies = [
  "clap",
  "day-01",
  "eyre",
+ "tools",
 ]
 
 [[package]]
@@ -71,6 +72,7 @@ version = "0.1.0"
 dependencies = [
  "eyre",
  "itertools",
+ "tools",
 ]
 
 [[package]]
@@ -246,6 +248,13 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "0066c8d12af8b5acd21e00547c3797fde4e8677254a7ee429176ccebbe93dd80"
 dependencies = [
  "unicode-width",
+]
+
+[[package]]
+name = "tools"
+version = "0.1.0"
+dependencies = [
+ "eyre",
 ]
 
 [[package]]

@@ -6,4 +6,5 @@ edition = "2021"
 [dependencies]
 clap = "3.0.0-beta.5"
 eyre = "0.6"
+tools = { path = "../tools" }
 day-01 = { path = "../01" }
