@@ -38,6 +38,8 @@ fn solve(day: usize, part2: bool, input: &mut dyn BufRead) {
     match (day, part2) {
         (1, false) => day_01::solve_a(input),
         (1, true) => day_01::solve_b(input),
+        (2, false) => day_02::solve_a(input),
+        (2, true) => day_02::solve_b(input),
         _ => {
             eprintln!("Day {} is not implemented.", day);
             Ok(())
