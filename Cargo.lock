@@ -9,6 +9,29 @@ dependencies = [
  "clap",
  "day-01",
  "day-02",
+ "day-03",
+ "day-04",
+ "day-05",
+ "day-06",
+ "day-07",
+ "day-08",
+ "day-09",
+ "day-10",
+ "day-11",
+ "day-12",
+ "day-13",
+ "day-14",
+ "day-15",
+ "day-16",
+ "day-17",
+ "day-18",
+ "day-19",
+ "day-20",
+ "day-21",
+ "day-22",
+ "day-23",
+ "day-24",
+ "day-25",
  "eyre",
  "tools",
 ]
@@ -82,6 +105,190 @@ version = "0.1.0"
 dependencies = [
  "eyre",
  "itertools",
+ "tools",
+]
+
+[[package]]
+name = "day-03"
+version = "0.1.0"
+dependencies = [
+ "eyre",
+ "tools",
+]
+
+[[package]]
+name = "day-04"
+version = "0.1.0"
+dependencies = [
+ "eyre",
+ "tools",
+]
+
+[[package]]
+name = "day-05"
+version = "0.1.0"
+dependencies = [
+ "eyre",
+ "tools",
+]
+
+[[package]]
+name = "day-06"
+version = "0.1.0"
+dependencies = [
+ "eyre",
+ "tools",
+]
+
+[[package]]
+name = "day-07"
+version = "0.1.0"
+dependencies = [
+ "eyre",
+ "tools",
+]
+
+[[package]]
+name = "day-08"
+version = "0.1.0"
+dependencies = [
+ "eyre",
+ "tools",
+]
+
+[[package]]
+name = "day-09"
+version = "0.1.0"
+dependencies = [
+ "eyre",
+ "tools",
+]
+
+[[package]]
+name = "day-10"
+version = "0.1.0"
+dependencies = [
+ "eyre",
+ "tools",
+]
+
+[[package]]
+name = "day-11"
+version = "0.1.0"
+dependencies = [
+ "eyre",
+ "tools",
+]
+
+[[package]]
+name = "day-12"
+version = "0.1.0"
+dependencies = [
+ "eyre",
+ "tools",
+]
+
+[[package]]
+name = "day-13"
+version = "0.1.0"
+dependencies = [
+ "eyre",
+ "tools",
+]
+
+[[package]]
+name = "day-14"
+version = "0.1.0"
+dependencies = [
+ "eyre",
+ "tools",
+]
+
+[[package]]
+name = "day-15"
+version = "0.1.0"
+dependencies = [
+ "eyre",
+ "tools",
+]
+
+[[package]]
+name = "day-16"
+version = "0.1.0"
+dependencies = [
+ "eyre",
+ "tools",
+]
+
+[[package]]
+name = "day-17"
+version = "0.1.0"
+dependencies = [
+ "eyre",
+ "tools",
+]
+
+[[package]]
+name = "day-18"
+version = "0.1.0"
+dependencies = [
+ "eyre",
+ "tools",
+]
+
+[[package]]
+name = "day-19"
+version = "0.1.0"
+dependencies = [
+ "eyre",
+ "tools",
+]
+
+[[package]]
+name = "day-20"
+version = "0.1.0"
+dependencies = [
+ "eyre",
+ "tools",
+]
+
+[[package]]
+name = "day-21"
+version = "0.1.0"
+dependencies = [
+ "eyre",
+ "tools",
+]
+
+[[package]]
+name = "day-22"
+version = "0.1.0"
+dependencies = [
+ "eyre",
+ "tools",
+]
+
+[[package]]
+name = "day-23"
+version = "0.1.0"
+dependencies = [
+ "eyre",
+ "tools",
+]
+
+[[package]]
+name = "day-24"
+version = "0.1.0"
+dependencies = [
+ "eyre",
+ "tools",
+]
+
+[[package]]
+name = "day-25"
+version = "0.1.0"
+dependencies = [
+ "eyre",
  "tools",
 ]
 
