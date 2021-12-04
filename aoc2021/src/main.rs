@@ -1,4 +1,5 @@
 use ::clap::Parser;
+use ::eyre::eyre;
 use ::std::{
     fs::File,
     io::{stdin, BufRead, BufReader},
@@ -86,10 +87,8 @@ fn solve(day: usize, part2: bool, input: &mut dyn BufRead) {
         (24, true) => day_24::solve_b(input),
         (25, false) => day_25::solve_a(input),
         (25, true) => day_25::solve_b(input),
-        _ => {
-            eprintln!("Day {} is not implemented.", day);
-            Ok(())
-        }
+        _ => Err(eyre!("There is no puzzle for day {}.", day)),
     }
+    .map(|result| println!("{}", result))
     .unwrap_or_else(|err| eprintln!("{}", err))
 }

@@ -1,7 +1,7 @@
 use eyre::{eyre, Result};
 use std::io::BufRead;
 
-pub fn solve_a(input: &mut dyn BufRead) -> Result<()> {
+pub fn solve_a(input: &mut dyn BufRead) -> Result<usize> {
     let numbers = tools::numbers_from_lines(input, 2)?;
     let mut bit_counters = [0; usize::BITS as usize]; // be prepared for numbers of "any size"
     let number_of_bits = max_number_of_bits(&numbers);
@@ -25,23 +25,19 @@ pub fn solve_a(input: &mut dyn BufRead) -> Result<()> {
         });
 
     let bit_mask = (1 << number_of_bits) - 1;
-    let epsilon = !gamma & bit_mask; // fails if a bit exists that is not set in *any* number
+    let epsilon = !gamma & bit_mask;
 
-    println!("Power Consumption: {}", gamma * epsilon);
-    Ok(())
+    Ok(gamma * epsilon)
 }
 
-pub fn solve_b(input: &mut dyn BufRead) -> Result<()> {
+pub fn solve_b(input: &mut dyn BufRead) -> Result<usize> {
     let numbers = tools::numbers_from_lines(input, 2)?;
     let number_of_bits = max_number_of_bits(&numbers);
 
     let oxygen_generator_rating = find_rating(numbers.clone(), false, number_of_bits)?;
     let co2_scrubber_rating = find_rating(numbers, true, number_of_bits)?;
-    println!(
-        "Life support rating: {}",
-        oxygen_generator_rating * co2_scrubber_rating
-    );
-    Ok(())
+
+    Ok(oxygen_generator_rating * co2_scrubber_rating)
 }
 
 fn find_rating(mut candidates: Vec<usize>, invert: bool, number_of_bits: u32) -> Result<usize> {

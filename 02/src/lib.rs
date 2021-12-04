@@ -1,7 +1,7 @@
 use eyre::{eyre, Result};
 use std::io::BufRead;
 
-pub fn solve_a(input: &mut dyn BufRead) -> Result<()> {
+pub fn solve_a(input: &mut dyn BufRead) -> Result<usize> {
     let mut position: usize = 0;
     let mut depth: usize = 0;
     for line in input.lines() {
@@ -17,11 +17,10 @@ pub fn solve_a(input: &mut dyn BufRead) -> Result<()> {
             _ => return Err(eyre!("unknown command '{}'", command)),
         }
     }
-    println!("Product of Position and Depth: {}", position * depth);
-    Ok(())
+    Ok(position * depth)
 }
 
-pub fn solve_b(input: &mut dyn BufRead) -> Result<()> {
+pub fn solve_b(input: &mut dyn BufRead) -> Result<usize> {
     let mut position: usize = 0;
     let mut depth: usize = 0;
     let mut aim: isize = 0;
@@ -41,6 +40,5 @@ pub fn solve_b(input: &mut dyn BufRead) -> Result<()> {
             _ => return Err(eyre!("unknown command '{}'", command)),
         }
     }
-    println!("Product of Position and Depth: {}", position * depth);
-    Ok(())
+    Ok(position * depth)
 }
