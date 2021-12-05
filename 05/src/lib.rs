@@ -1,7 +1,17 @@
 use eyre::{eyre, Result};
 use std::io::BufRead;
 
+static ONLY_HORIZONTAL: bool = true;
+
 pub fn solve_a(input: &mut dyn BufRead) -> Result<usize> {
+    solve(input, ONLY_HORIZONTAL)
+}
+
+pub fn solve_b(input: &mut dyn BufRead) -> Result<usize> {
+    solve(input, !ONLY_HORIZONTAL)
+}
+
+fn solve(input: &mut dyn BufRead, only_horizontal: bool) -> Result<usize> {
     let lines = line_segments(input)?;
     let max_coord = lines.iter().fold((0, 0), |max, line| {
         (
@@ -12,7 +22,7 @@ pub fn solve_a(input: &mut dyn BufRead) -> Result<usize> {
     let mut area = Area::new(max_coord.0, max_coord.1);
     for line in lines
         .iter()
-        .filter(|line| line.0.x == line.1.x || line.0.y == line.1.y)
+        .filter(|line| !only_horizontal || line.0.x == line.1.x || line.0.y == line.1.y)
     {
         line.draw_on(&mut area);
     }
@@ -96,8 +106,4 @@ impl Area {
             .filter(|&&xy| xy > 1)
             .count()
     }
-}
-
-pub fn solve_b(_input: &mut dyn BufRead) -> Result<usize> {
-    Err(eyre!("not implemented"))
 }
